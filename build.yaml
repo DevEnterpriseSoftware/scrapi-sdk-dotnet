@@ -61,9 +61,6 @@ steps:
       projects: |
         **/$(devent.build.project).csproj
       arguments: "--configuration $(devent.build.configuration)"
-      feedsToUse: config
-      nugetConfigPath: NuGet.Config
-      externalFeedCredentials: ""
       verbosityRestore: Normal
 
   - task: DotNetCoreCLI@2
@@ -81,7 +78,7 @@ steps:
   - task: CopyFiles@2
     displayName: "Copy NuGet Package to Staging"
     inputs:
-      contents: "**/$(devent.build.project)/**/*.nupkg"
+      contents: "**/*.nupkg"
       targetFolder: "$(Build.ArtifactStagingDirectory)/NuGet"
       flattenFolders: true
 
