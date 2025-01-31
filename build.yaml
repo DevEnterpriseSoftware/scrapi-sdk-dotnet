@@ -1,12 +1,9 @@
-﻿trigger:
+trigger:
   batch: true
   branches:
     include:
       - dev
       - master
-  paths:
-    include:
-      - "/src/DevEnterprise.Scrapi.Sdk"
 
 pool:
   vmImage: windows-latest
