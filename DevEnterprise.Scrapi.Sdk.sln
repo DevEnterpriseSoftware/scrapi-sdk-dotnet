@@ -7,11 +7,14 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		NuGet|Any CPU = NuGet|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7761F9E5-C88D-461C-B7FE-332A1ECC3EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7761F9E5-C88D-461C-B7FE-332A1ECC3EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7761F9E5-C88D-461C-B7FE-332A1ECC3EBA}.NuGet|Any CPU.ActiveCfg = NuGet|Any CPU
+		{7761F9E5-C88D-461C-B7FE-332A1ECC3EBA}.NuGet|Any CPU.Build.0 = NuGet|Any CPU
 		{7761F9E5-C88D-461C-B7FE-332A1ECC3EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7761F9E5-C88D-461C-B7FE-332A1ECC3EBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

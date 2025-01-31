@@ -54,11 +54,6 @@ steps:
     inputs:
       versionSpec: 6.x
 
-  - task: NuGetAuthenticate@1
-    displayName: "Authenticate NuGet"
-    inputs:
-      nuGetServiceConnections: ""
-
   - task: DotNetCoreCLI@2
     displayName: "Build Project"
     inputs:

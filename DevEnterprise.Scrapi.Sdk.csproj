@@ -17,6 +17,7 @@
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net8.0;net9.0</TargetFrameworks>
     <RootNamespace>DevEnterprise.Scrapi.Sdk</RootNamespace>
+    <Configurations>Debug;Release;NuGet</Configurations>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <Version>1.0.0.0</Version>
@@ -52,22 +53,20 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <IncludeSource>false</IncludeSource>
     <IncludeSymbols>false</IncludeSymbols>
-    <PackageProjectUrl>https://scrapi.tech/</PackageProjectUrl>
+    <PackageProjectUrl>https://scrapi.tech</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageId>ScrAPI</PackageId>
     <PackageTags>scraper;scraping;extractor;crawler;api;sdk;</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl>https://deventerprise.com/img/scrapi.png</PackageIconUrl>
-    <Description>ScrAPI is a flexible and secure web scraping service that focuses on privacy.</Description>
+    <Description>The only web scraping service you'll ever need that offers advanced features that are simple to use for efficient data extraction.</Description>
     <RepositoryUrl>https://github.com/DevEnterpriseSoftware/scrapi-sdk-dotnet</RepositoryUrl>
     <PackageReleaseNotes />
   </PropertyGroup>
 
   <ItemGroup Condition="'$(Configuration)'=='NuGet'">
-    <None Include="icon.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
