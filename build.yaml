@@ -1,0 +1,113 @@
+﻿trigger:
+  batch: true
+  branches:
+    include:
+      - dev
+      - master
+  paths:
+    include:
+      - "/src/DevEnterprise.Scrapi.Sdk"
+
+pool:
+  vmImage: windows-latest
+
+variables:
+  - group: ScrAPI
+  - name: devent.build.configuration
+    value: "NuGet"
+  - name: devent.build.project
+    value: "DevEnterprise.Scrapi.Sdk"
+  - name: version.major
+    value: "1"
+  - name: version.minor
+    value: "0"
+  - name: version.revision
+    value: "0"
+  - name: version.build
+    value: "$(Build.BuildId)"
+  - name: version.number
+    value: "$(version.major).$(version.minor).$(version.revision).$(version.build)"
+  - name: NUGET_PLUGIN_HANDSHAKE_TIMEOUT_IN_SECONDS
+    value: 30
+  - name: NUGET_PLUGIN_REQUEST_TIMEOUT_IN_SECONDS
+    value: 30
+
+workspace:
+  clean: all
+
+steps:
+  - checkout: self
+    lfs: false
+    fetchDepth: 1
+
+  - task: richardfennellBM.BM-VSTS-Versioning-Task.Version-DotNetCoreAssemblies-Task.VersionDotNetCoreAssemblies@3
+    displayName: "Version"
+    inputs:
+      versionNumber: "$(version.number)"
+      filenamePattern: ".csproj"
+      addDefault: true
+
+  - task: UseDotNet@2
+    displayName: "Use .NET Core 9.x"
+    inputs:
+      version: 9.x
+
+  - task: NuGetToolInstaller@1
+    displayName: "Use NuGet 6.x"
+    inputs:
+      versionSpec: 6.x
+
+  - task: NuGetAuthenticate@1
+    displayName: "Authenticate NuGet"
+    inputs:
+      nuGetServiceConnections: ""
+
+  - task: DotNetCoreCLI@2
+    displayName: "Build Project"
+    inputs:
+      command: build
+      projects: |
+        **/$(devent.build.project).csproj
+      arguments: "--configuration $(devent.build.configuration)"
+      feedsToUse: config
+      nugetConfigPath: NuGet.Config
+      externalFeedCredentials: ""
+      verbosityRestore: Normal
+
+  - task: DotNetCoreCLI@2
+    displayName: "Publish Project"
+    inputs:
+      command: publish
+      publishWebProjects: false
+      zipAfterPublish: false
+      projects: |
+        **/$(devent.build.project).csproj
+      arguments: "--no-build --configuration $(devent.build.configuration) --output $(Build.ArtifactStagingDirectory)/Publish"
+      verbosityRestore: Normal
+    enabled: false
+
+  - task: CopyFiles@2
+    displayName: "Copy NuGet Package to Staging"
+    inputs:
+      contents: "**/$(devent.build.project)/**/*.nupkg"
+      targetFolder: "$(Build.ArtifactStagingDirectory)/NuGet"
+      flattenFolders: true
+
+  - task: DownloadSecureFile@1
+    displayName: "Download Signing Certificate"
+    name: SigningCertificate
+    inputs:
+      secureFile: "DevEnterprise.pfx"
+  
+  - task: NuGetCommand@2
+    displayName: "Sign NuGet Package"
+    inputs:
+      command: custom
+      arguments: 'sign $(Build.ArtifactStagingDirectory)\NuGet\*.nupkg -CertificatePath "$(SigningCertificate.SecureFilePath)" -CertificatePassword "$(CertificatePassword)" -Timestamper http://timestamp.sectigo.com?td=sha256'
+
+  - task: PublishBuildArtifacts@1
+    displayName: "Publish NuGet Package Artifact"
+    inputs:
+      pathToPublish: "$(Build.ArtifactStagingDirectory)/NuGet"
+      artifactName: "$(devent.build.project).$(Build.BuildNumber)"
+    condition: succeeded()

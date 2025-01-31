@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="My StyleCop rules" Description="" ToolsVersion="14.0">
+  <Include Path="StyleCop.Analyzers.ruleset" Action="Default" />
+  <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.Analyzers">
+    <!-- XML comment analysis is disabled due to project configuration -->
+    <Rule Id="SA0001" Action="None" />
+    <!-- Prefix local calls with this -->
+    <Rule Id="SA1101" Action="None" />
+    <!-- The C# code contains a region -->
+    <Rule Id="SA1124" Action="None" />
+    <!-- Using directive should appear within a namespace declaration -->
+    <Rule Id="SA1200" Action="None" />
+    <!-- The documentation text within a C# property's summary tag does not match the accessors within the property -->
+    <Rule Id="SA1623" Action="None" />
+    <!-- A section of the Xml header documentation for a C# element does not end with a period (also known as a full stop). -->
+    <Rule Id="SA1629" Action="None" />
+    <!-- The file header is missing or not located at the top of the file -->
+    <Rule Id="SA1633" Action="None" />
+    
+  </Rules>
+  
+  <Rules AnalyzerId="SonarAnalyzer.CSharp" RuleNamespace="SonarAnalyzer.CSharp">
+  
+  </Rules>
+</RuleSet>
