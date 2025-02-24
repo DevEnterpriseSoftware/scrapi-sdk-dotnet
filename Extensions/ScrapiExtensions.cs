@@ -11,6 +11,7 @@ public static partial class ScrapiExtensions
 {
 #if !NET7_0_OR_GREATER
   private static readonly Regex NumbersOnlyRegex = new(@"([^\d\.])*", RegexOptions.None, TimeSpan.FromSeconds(1));
+  private static readonly Regex NoScriptRegex = new(@"<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>", RegexOptions.IgnoreCase, TimeSpan.FromSeconds(5));
 #endif
 
   /// <summary>
@@ -30,9 +31,9 @@ public static partial class ScrapiExtensions
     }
 
 #if NET7_0_OR_GREATER
-    var result = NumbersOnlyRegex().Replace(text!, string.Empty);
+    var result = NumbersOnlyRegex().Replace(text, string.Empty);
 #else
-    var result = NumbersOnlyRegex.Replace(text!, string.Empty);
+    var result = NumbersOnlyRegex.Replace(text, string.Empty);
 #endif
 
     if (!includeDecimalPoints)
@@ -44,6 +45,28 @@ public static partial class ScrapiExtensions
     {
       return result.Trim();
     }
+
+    return result;
+  }
+
+  /// <summary>
+  /// Remove all script tags from HTML.
+  /// This is useful if you want to render the resulting HTML without executing any of the script on the page.
+  /// </summary>
+  /// <param name="html">The HTML to remove script tags from.</param>
+  /// <returns>HTML with all script tags removed.</returns>
+  public static string HtmlWithNoScript(this string? html)
+  {
+    if (string.IsNullOrEmpty(html))
+    {
+      return string.Empty;
+    }
+
+#if NET7_0_OR_GREATER
+    var result = NoScriptRegex().Replace(html, string.Empty);
+#else
+    var result = NoScriptRegex.Replace(html, string.Empty);
+#endif
 
     return result;
   }
@@ -203,8 +226,8 @@ public static partial class ScrapiExtensions
 
     if (keys.Keys.Contains("display"))
     {
-      string display = keys["display"];
-      if (display is not null && display == "none")
+      var display = keys["display"];
+      if (display?.Equals("none", StringComparison.OrdinalIgnoreCase) == true)
       {
         return false;
       }
@@ -212,8 +235,8 @@ public static partial class ScrapiExtensions
 
     if (keys.Keys.Contains("visibility"))
     {
-      string visibility = keys["visibility"];
-      if (visibility is not null && visibility == "hidden")
+      var visibility = keys["visibility"];
+      if (visibility?.Equals("hidden", StringComparison.OrdinalIgnoreCase) == true)
       {
         return false;
       }
@@ -245,5 +268,8 @@ public static partial class ScrapiExtensions
 #if NET7_0_OR_GREATER
   [GeneratedRegex(@"([^\d\.])*", RegexOptions.None, 1000)]
   private static partial Regex NumbersOnlyRegex();
+
+  [GeneratedRegex(@"<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>", RegexOptions.IgnoreCase, 5000)]
+  private static partial Regex NoScriptRegex();
 #endif
 }

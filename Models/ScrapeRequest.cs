@@ -46,6 +46,7 @@ public sealed record ScrapeRequest
   /// The URL to scrape.
   /// </value>
   /// <example>https://deventerprise.com/</example>
+  /// <exception cref="ArgumentException">The URL provided is not a valid absolute URL.</exception>
   [DataMember]
   public Uri Url
   {

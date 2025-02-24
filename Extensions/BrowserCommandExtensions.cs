@@ -31,7 +31,26 @@ public static class BrowserCommandExtensions
   /// </returns>
   public static IList<IBrowserCommand> Wait(this IList<IBrowserCommand> commands, int milliseconds)
   {
-    commands.Add(new WaitCommand { Milliseconds = milliseconds });
+    return commands.Wait(TimeSpan.FromMilliseconds(milliseconds));
+  }
+
+  /// <summary>
+  /// Wait for a given amount of time before continuing.
+  /// </summary>
+  /// <param name="commands">List of browser commands to extend.</param>
+  /// <param name="timeSpan">The amount of time to wait (maximum of 15 seconds).</param>
+  /// <returns>
+  /// The same list of browser commands that got extended.
+  /// </returns>
+  /// <exception cref="ArgumentException">The maximum wait time is 15 seconds.</exception>
+  public static IList<IBrowserCommand> Wait(this IList<IBrowserCommand> commands, TimeSpan timeSpan)
+  {
+    if (timeSpan.TotalMilliseconds > 15000)
+    {
+      throw new ArgumentException("The maximum wait time is 15 seconds.");
+    }
+
+    commands.Add(new WaitCommand { Milliseconds = Convert.ToInt32(timeSpan.TotalMilliseconds) });
     return commands;
   }
 

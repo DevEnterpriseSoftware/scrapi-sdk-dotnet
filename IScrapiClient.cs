@@ -53,7 +53,7 @@ public interface IScrapiClient : IDisposable
   /// <returns>
   /// A list of supported countries.
   /// </returns>
-  Task<SupportedCountryResponse?> GetSupportedCountriesAsync(CancellationToken cancellationToken = default);
+  Task<IEnumerable<SupportedCountryResponse>> GetSupportedCountriesAsync(CancellationToken cancellationToken = default);
 
   /// <summary>
   /// Get the current credit balance for your API key.

@@ -115,8 +115,8 @@ public sealed class ScrapiClient : IScrapiClient
   }
 
   /// <inheritdoc/>
-  public Task<SupportedCountryResponse?> GetSupportedCountriesAsync(CancellationToken cancellationToken = default)
-    => MakeApiCallAsync<object, SupportedCountryResponse>(HttpMethod.Get, "v1/countries", null, cancellationToken);
+  public async Task<IEnumerable<SupportedCountryResponse>> GetSupportedCountriesAsync(CancellationToken cancellationToken = default)
+    => await MakeApiCallAsync<object, IEnumerable<SupportedCountryResponse>?>(HttpMethod.Get, "v1/countries", null, cancellationToken) ?? [];
 
   /// <inheritdoc/>
   public async Task<int> GetCreditBalanceAsync(CancellationToken cancellationToken = default)
