@@ -1,17 +1,9 @@
-<div align="center">
-
-![ScrAPI logo](icon_small.png)
+![ScrAPI logo](https://raw.githubusercontent.com/DevEnterpriseSoftware/scrapi-sdk-dotnet/master/icon_small.png)
 	
 # ScrAPI SDK for .NET
 
-</div>
-
-<div align="center">
-
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Nuget](https://img.shields.io/nuget/dt/ScrAPI)
-
-</div>
 
 This is the official .NET SDK for the ScrAPI web scraping service.
 - [Website](https://scrapi.tech)
