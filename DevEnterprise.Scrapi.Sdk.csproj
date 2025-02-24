@@ -57,6 +57,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageId>ScrAPI</PackageId>
     <PackageTags>scraper;scraping;extractor;crawler;api;sdk;</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>icon.png</PackageIcon>
     <PackageIconUrl>https://deventerprise.com/img/scrapi.png</PackageIconUrl>
     <Description>The only web scraping service you'll ever need that offers advanced features that are simple to use for efficient data extraction.</Description>
