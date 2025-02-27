@@ -10,6 +10,7 @@ This is the official .NET SDK for the ScrAPI web scraping service.
 - [Documentation](https://scrapi.tech/docs)
 - [Installation](#installation)
 - [Quick Start](#quick-start)
+- [Dependency Injection](#dependency-injection)
 - [Scrape Request Options](#scrape-request-options)
     - [Browser Commands](#browser-commands)
 - [Scrape Response Data](#scrape-response-data)
@@ -19,7 +20,6 @@ This is the official .NET SDK for the ScrAPI web scraping service.
     - [Balance Check](#balance-check)
     - [Supported Countries](#supported-countries)
 - [Exceptions](#exceptions)
-- [Dependency Injection](#dependency-injection)
 
 ## Installation
 
