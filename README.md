@@ -5,6 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Nuget](https://img.shields.io/nuget/dt/ScrAPI)
 
+ScrAPI is your ultimate web scraping solution, offering powerful, reliable, and easy-to-use features to extract data from any website effortlessly.
+
 This is the official .NET SDK for the ScrAPI web scraping service.
 - [Website](https://scrapi.tech)
 - [Documentation](https://scrapi.tech/docs)

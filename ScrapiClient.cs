@@ -15,7 +15,7 @@ public sealed class ScrapiClient : IScrapiClient
   public static readonly string ApiUrl = "https://api.scrapi.tech";
 
   /// <summary>
-  /// The API healtch check URL.
+  /// The API health check URL.
   /// </summary>
   public static readonly string ApiHealthUrl = "https://api.scrapi.tech/health";
 #pragma warning restore S1075 // URIs should not be hardcoded
