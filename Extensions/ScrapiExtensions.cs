@@ -1,5 +1,4 @@
 ﻿using System.Text.RegularExpressions;
-using Fizzler.Systems.HtmlAgilityPack;
 using HtmlAgilityPack;
 
 namespace DevEnterprise.Scrapi.Sdk;
@@ -72,42 +71,6 @@ public static partial class ScrapiExtensions
   }
 
   /// <summary>
-  /// A safe query selector that will not throw exceptions when the selector does not find a match.
-  /// </summary>
-  /// <param name="node">The element/node to operate on.</param>
-  /// <param name="selector">The CSS selector.</param>
-  /// <param name="attribute">(Optional) The HTML attribute name to select.</param>
-  /// <param name="stripHtml">(Optional) <c>true</c>to strip HTML from the return value, <c>false</c> to include HTML.</param>
-  /// <returns>
-  /// The HTML (or stripped HTML) located at the given selector.
-  /// </returns>
-  public static string SafeQuerySelector(this HtmlNode? node, string? selector, string? attribute = null, bool stripHtml = true)
-  {
-    var result = node.QuerySelector(selector);
-
-    if (result is not null)
-    {
-      if (!string.IsNullOrEmpty(attribute))
-      {
-        return result.GetAttributeValue(attribute, string.Empty).Trim();
-      }
-      else if (!string.IsNullOrEmpty(result.InnerText))
-      {
-        if (stripHtml)
-        {
-          return result.InnerText.Trim();
-        }
-        else
-        {
-          return result.InnerHtml.Trim();
-        }
-      }
-    }
-
-    return string.Empty;
-  }
-
-  /// <summary>
   /// Shortcut method to get next/adjacent element to the one provided.
   /// </summary>
   /// <param name="node">The element/node to operate on.</param>
@@ -132,52 +95,6 @@ public static partial class ScrapiExtensions
 
     return null;
   }
-
-  #region Fizzler.Systems.HtmlAgilityPack
-
-  /// <summary>
-  /// Returns the first matching element node within the node's subtree. If no matching node is found, <c>null</c> is returned.
-  /// </summary>
-  /// <remarks>
-  /// https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
-  /// </remarks>
-  /// <param name="node">The element/node to operate on.</param>
-  /// <param name="selector">The CSS selector.</param>
-  /// <returns>
-  /// The first matching element/node that matches the CSS selector or <c>null</c> if none where found.
-  /// </returns>
-  public static HtmlNode? QuerySelector(this HtmlNode? node, string? selector)
-  {
-    if (node is null || string.IsNullOrEmpty(selector))
-    {
-      return null;
-    }
-
-    return HtmlNodeSelection.QuerySelector(node, selector);
-  }
-
-  /// <summary>
-  /// Returns a node list containing all matching element nodes within the node's subtree, or an empty list if no matches are found.
-  /// </summary>
-  /// <remarks>
-  /// https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors
-  /// </remarks>
-  /// <param name="node">The element/node to operate on.</param>
-  /// <param name="selector">The CSS selector.</param>
-  /// <returns>
-  /// A list of element nodes that match the CSS selector or an empty list if none where found.
-  /// </returns>
-  public static IEnumerable<HtmlNode> QuerySelectorAll(this HtmlNode? node, string? selector)
-  {
-    if (node is null || string.IsNullOrEmpty(selector))
-    {
-      return [];
-    }
-
-    return HtmlNodeSelection.QuerySelectorAll(node, selector) ?? [];
-  }
-
-  #endregion
 
   /// <summary>
   /// Check if an element is visible.

@@ -11,22 +11,6 @@
           "Fody": "6.6.4"
         }
       },
-      "Fizzler": {
-        "type": "Direct",
-        "requested": "[1.3.1, )",
-        "resolved": "1.3.1",
-        "contentHash": "ujU39lID9SL1PjD2hyiaQJw8tObM2c+T/vlTNV0Xl9+rj/8a2rHr9G2j9e5dL8rhkekZ1Wx5AIEYoO/LW06dnA=="
-      },
-      "Fizzler.Systems.HtmlAgilityPack": {
-        "type": "Direct",
-        "requested": "[1.2.1, )",
-        "resolved": "1.2.1",
-        "contentHash": "JVWdUgFd8KdsIoertmc9jgVc3eNpZmrXgk3rW91s0ymizAT3S/QresLY+bf+V8XO/kMy4mTV34h517g03fUqqw==",
-        "dependencies": {
-          "Fizzler": "1.2.0",
-          "HtmlAgilityPack": "1.5.1"
-        }
-      },
       "Fody": {
         "type": "Direct",
         "requested": "[6.9.2, )",
@@ -102,22 +86,6 @@
           "Fody": "6.6.4"
         }
       },
-      "Fizzler": {
-        "type": "Direct",
-        "requested": "[1.3.1, )",
-        "resolved": "1.3.1",
-        "contentHash": "ujU39lID9SL1PjD2hyiaQJw8tObM2c+T/vlTNV0Xl9+rj/8a2rHr9G2j9e5dL8rhkekZ1Wx5AIEYoO/LW06dnA=="
-      },
-      "Fizzler.Systems.HtmlAgilityPack": {
-        "type": "Direct",
-        "requested": "[1.2.1, )",
-        "resolved": "1.2.1",
-        "contentHash": "JVWdUgFd8KdsIoertmc9jgVc3eNpZmrXgk3rW91s0ymizAT3S/QresLY+bf+V8XO/kMy4mTV34h517g03fUqqw==",
-        "dependencies": {
-          "Fizzler": "1.2.0",
-          "HtmlAgilityPack": "1.5.1"
-        }
-      },
       "Fody": {
         "type": "Direct",
         "requested": "[6.9.2, )",
@@ -177,22 +145,6 @@
         "contentHash": "vzGcpFU7uY4SbdB1Q68sFqv52HU5V1l39bF1rw6BIb7Os/DRLZa5ObV1yf/CNuTXj8IZjqJQ7PnTzSUiI/W49A==",
         "dependencies": {
           "Fody": "6.6.4"
-        }
-      },
-      "Fizzler": {
-        "type": "Direct",
-        "requested": "[1.3.1, )",
-        "resolved": "1.3.1",
-        "contentHash": "ujU39lID9SL1PjD2hyiaQJw8tObM2c+T/vlTNV0Xl9+rj/8a2rHr9G2j9e5dL8rhkekZ1Wx5AIEYoO/LW06dnA=="
-      },
-      "Fizzler.Systems.HtmlAgilityPack": {
-        "type": "Direct",
-        "requested": "[1.2.1, )",
-        "resolved": "1.2.1",
-        "contentHash": "JVWdUgFd8KdsIoertmc9jgVc3eNpZmrXgk3rW91s0ymizAT3S/QresLY+bf+V8XO/kMy4mTV34h517g03fUqqw==",
-        "dependencies": {
-          "Fizzler": "1.2.0",
-          "HtmlAgilityPack": "1.5.1"
         }
       },
       "Fody": {
@@ -256,22 +208,6 @@
           "Fody": "6.6.4"
         }
       },
-      "Fizzler": {
-        "type": "Direct",
-        "requested": "[1.3.1, )",
-        "resolved": "1.3.1",
-        "contentHash": "ujU39lID9SL1PjD2hyiaQJw8tObM2c+T/vlTNV0Xl9+rj/8a2rHr9G2j9e5dL8rhkekZ1Wx5AIEYoO/LW06dnA=="
-      },
-      "Fizzler.Systems.HtmlAgilityPack": {
-        "type": "Direct",
-        "requested": "[1.2.1, )",
-        "resolved": "1.2.1",
-        "contentHash": "JVWdUgFd8KdsIoertmc9jgVc3eNpZmrXgk3rW91s0ymizAT3S/QresLY+bf+V8XO/kMy4mTV34h517g03fUqqw==",
-        "dependencies": {
-          "Fizzler": "1.2.0",
-          "HtmlAgilityPack": "1.5.1"
-        }
-      },
       "Fody": {
         "type": "Direct",
         "requested": "[6.9.2, )",
@@ -331,22 +267,6 @@
         "contentHash": "vzGcpFU7uY4SbdB1Q68sFqv52HU5V1l39bF1rw6BIb7Os/DRLZa5ObV1yf/CNuTXj8IZjqJQ7PnTzSUiI/W49A==",
         "dependencies": {
           "Fody": "6.6.4"
-        }
-      },
-      "Fizzler": {
-        "type": "Direct",
-        "requested": "[1.3.1, )",
-        "resolved": "1.3.1",
-        "contentHash": "ujU39lID9SL1PjD2hyiaQJw8tObM2c+T/vlTNV0Xl9+rj/8a2rHr9G2j9e5dL8rhkekZ1Wx5AIEYoO/LW06dnA=="
-      },
-      "Fizzler.Systems.HtmlAgilityPack": {
-        "type": "Direct",
-        "requested": "[1.2.1, )",
-        "resolved": "1.2.1",
-        "contentHash": "JVWdUgFd8KdsIoertmc9jgVc3eNpZmrXgk3rW91s0ymizAT3S/QresLY+bf+V8XO/kMy4mTV34h517g03fUqqw==",
-        "dependencies": {
-          "Fizzler": "1.2.0",
-          "HtmlAgilityPack": "1.5.1"
         }
       },
       "Fody": {
