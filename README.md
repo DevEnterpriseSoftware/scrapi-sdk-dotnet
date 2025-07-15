@@ -233,3 +233,8 @@ catch (ScrapiException ex) when (ex.StatusCode == System.Net.HttpStatusCode.Inte
 // The result will contain the content and other information about the operation.
 Console.WriteLine(result?.Content);
 ```
+
+## Useful Libraries
+
+The SDK includes [Html Agility Pack](https://html-agility-pack.net/) as a dependency.
+If you are looking for additional third party libraries that work well with Html Agility Pack (CCS selectors, crawling etc) to assist with your data extraction requirements take a look at the following packages: https://html-agility-pack.net/third-party-library

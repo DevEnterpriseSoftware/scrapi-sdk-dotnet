@@ -41,9 +41,9 @@
       },
       "NetEscapades.EnumGenerators": {
         "type": "Direct",
-        "requested": "[1.0.0-beta13, )",
-        "resolved": "1.0.0-beta13",
-        "contentHash": "1AEoQwprf6NLrtUAJuyEc3UZbV5BliUKRR8M2j3wc1NMMHIG9fWB109Xl8IbbFLos1veju0ial8+/wR02PjEMA=="
+        "requested": "[1.0.0-beta14, )",
+        "resolved": "1.0.0-beta14",
+        "contentHash": "JIYagrK2wwDIntQXcy+txx6kNLYpfOEd82DTCxCeka039pjzfx3UPe49iCTVIXPgzQMvZnuuqWlnXfDyDZF6Pg=="
       },
       "NETStandard.Library": {
         "type": "Direct",
@@ -68,9 +68,9 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
-        "requested": "[10.10.0.116381, )",
-        "resolved": "10.10.0.116381",
-        "contentHash": "HkJuI8dBE64BF7ySlfN8t/lQ91E/pgiQPvOS51lIKKy3/IJiwHHqQ4dkI6gixDkKBDK7lImvvNa0ECH+I0PqmA=="
+        "requested": "[10.13.0.120203, )",
+        "resolved": "10.13.0.120203",
+        "contentHash": "HQ8swVDz88R7UMT7uBXjr4AwZp1+z31ovmdM9UYu3fQSc+C7jv7/5hBBKABpLFag88am6HaG3k9yEn3/tXc1Vw=="
       },
       "StyleCop.Analyzers": {
         "type": "Direct",
@@ -132,9 +132,9 @@
       },
       "NetEscapades.EnumGenerators": {
         "type": "Direct",
-        "requested": "[1.0.0-beta13, )",
-        "resolved": "1.0.0-beta13",
-        "contentHash": "1AEoQwprf6NLrtUAJuyEc3UZbV5BliUKRR8M2j3wc1NMMHIG9fWB109Xl8IbbFLos1veju0ial8+/wR02PjEMA=="
+        "requested": "[1.0.0-beta14, )",
+        "resolved": "1.0.0-beta14",
+        "contentHash": "JIYagrK2wwDIntQXcy+txx6kNLYpfOEd82DTCxCeka039pjzfx3UPe49iCTVIXPgzQMvZnuuqWlnXfDyDZF6Pg=="
       },
       "Newtonsoft.Json": {
         "type": "Direct",
@@ -150,9 +150,9 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
-        "requested": "[10.10.0.116381, )",
-        "resolved": "10.10.0.116381",
-        "contentHash": "HkJuI8dBE64BF7ySlfN8t/lQ91E/pgiQPvOS51lIKKy3/IJiwHHqQ4dkI6gixDkKBDK7lImvvNa0ECH+I0PqmA=="
+        "requested": "[10.13.0.120203, )",
+        "resolved": "10.13.0.120203",
+        "contentHash": "HQ8swVDz88R7UMT7uBXjr4AwZp1+z31ovmdM9UYu3fQSc+C7jv7/5hBBKABpLFag88am6HaG3k9yEn3/tXc1Vw=="
       },
       "StyleCop.Analyzers": {
         "type": "Direct",
@@ -209,9 +209,9 @@
       },
       "NetEscapades.EnumGenerators": {
         "type": "Direct",
-        "requested": "[1.0.0-beta13, )",
-        "resolved": "1.0.0-beta13",
-        "contentHash": "1AEoQwprf6NLrtUAJuyEc3UZbV5BliUKRR8M2j3wc1NMMHIG9fWB109Xl8IbbFLos1veju0ial8+/wR02PjEMA=="
+        "requested": "[1.0.0-beta14, )",
+        "resolved": "1.0.0-beta14",
+        "contentHash": "JIYagrK2wwDIntQXcy+txx6kNLYpfOEd82DTCxCeka039pjzfx3UPe49iCTVIXPgzQMvZnuuqWlnXfDyDZF6Pg=="
       },
       "Newtonsoft.Json": {
         "type": "Direct",
@@ -227,9 +227,9 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
-        "requested": "[10.10.0.116381, )",
-        "resolved": "10.10.0.116381",
-        "contentHash": "HkJuI8dBE64BF7ySlfN8t/lQ91E/pgiQPvOS51lIKKy3/IJiwHHqQ4dkI6gixDkKBDK7lImvvNa0ECH+I0PqmA=="
+        "requested": "[10.13.0.120203, )",
+        "resolved": "10.13.0.120203",
+        "contentHash": "HQ8swVDz88R7UMT7uBXjr4AwZp1+z31ovmdM9UYu3fQSc+C7jv7/5hBBKABpLFag88am6HaG3k9yEn3/tXc1Vw=="
       },
       "StyleCop.Analyzers": {
         "type": "Direct",
@@ -286,9 +286,9 @@
       },
       "NetEscapades.EnumGenerators": {
         "type": "Direct",
-        "requested": "[1.0.0-beta13, )",
-        "resolved": "1.0.0-beta13",
-        "contentHash": "1AEoQwprf6NLrtUAJuyEc3UZbV5BliUKRR8M2j3wc1NMMHIG9fWB109Xl8IbbFLos1veju0ial8+/wR02PjEMA=="
+        "requested": "[1.0.0-beta14, )",
+        "resolved": "1.0.0-beta14",
+        "contentHash": "JIYagrK2wwDIntQXcy+txx6kNLYpfOEd82DTCxCeka039pjzfx3UPe49iCTVIXPgzQMvZnuuqWlnXfDyDZF6Pg=="
       },
       "Newtonsoft.Json": {
         "type": "Direct",
@@ -304,9 +304,9 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
-        "requested": "[10.10.0.116381, )",
-        "resolved": "10.10.0.116381",
-        "contentHash": "HkJuI8dBE64BF7ySlfN8t/lQ91E/pgiQPvOS51lIKKy3/IJiwHHqQ4dkI6gixDkKBDK7lImvvNa0ECH+I0PqmA=="
+        "requested": "[10.13.0.120203, )",
+        "resolved": "10.13.0.120203",
+        "contentHash": "HQ8swVDz88R7UMT7uBXjr4AwZp1+z31ovmdM9UYu3fQSc+C7jv7/5hBBKABpLFag88am6HaG3k9yEn3/tXc1Vw=="
       },
       "StyleCop.Analyzers": {
         "type": "Direct",
@@ -363,9 +363,9 @@
       },
       "NetEscapades.EnumGenerators": {
         "type": "Direct",
-        "requested": "[1.0.0-beta13, )",
-        "resolved": "1.0.0-beta13",
-        "contentHash": "1AEoQwprf6NLrtUAJuyEc3UZbV5BliUKRR8M2j3wc1NMMHIG9fWB109Xl8IbbFLos1veju0ial8+/wR02PjEMA=="
+        "requested": "[1.0.0-beta14, )",
+        "resolved": "1.0.0-beta14",
+        "contentHash": "JIYagrK2wwDIntQXcy+txx6kNLYpfOEd82DTCxCeka039pjzfx3UPe49iCTVIXPgzQMvZnuuqWlnXfDyDZF6Pg=="
       },
       "Newtonsoft.Json": {
         "type": "Direct",
@@ -381,9 +381,9 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
-        "requested": "[10.10.0.116381, )",
-        "resolved": "10.10.0.116381",
-        "contentHash": "HkJuI8dBE64BF7ySlfN8t/lQ91E/pgiQPvOS51lIKKy3/IJiwHHqQ4dkI6gixDkKBDK7lImvvNa0ECH+I0PqmA=="
+        "requested": "[10.13.0.120203, )",
+        "resolved": "10.13.0.120203",
+        "contentHash": "HQ8swVDz88R7UMT7uBXjr4AwZp1+z31ovmdM9UYu3fQSc+C7jv7/5hBBKABpLFag88am6HaG3k9yEn3/tXc1Vw=="
       },
       "StyleCop.Analyzers": {
         "type": "Direct",
