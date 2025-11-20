@@ -84,6 +84,7 @@ public sealed record ScrapeRequest
   /// The response selector (CSS or XPath).
   /// </value>
   /// <example>.article-content</example>
+  [DataMember(EmitDefaultValue = false)]
   public string? ResponseSelector { get; set; } = ScrapeRequestDefaults.ResponseSelector;
 
   /// <summary>
@@ -161,7 +162,7 @@ public sealed record ScrapeRequest
   /// The proxy country.
   /// </value>
   /// <example>ZAF</example>
-  [DataMember]
+  [DataMember(EmitDefaultValue = false)]
   public string? ProxyCountry { get; set; } = ScrapeRequestDefaults.ProxyCountry;
 
   /// <summary>
@@ -175,7 +176,7 @@ public sealed record ScrapeRequest
   /// The proxy city.
   /// </value>
   /// <example>CapeTown</example>
-  [DataMember]
+  [DataMember(EmitDefaultValue = false)]
   public string? ProxyCity { get; set; } = ScrapeRequestDefaults.ProxyCity;
 
   /// <summary>
