@@ -17,7 +17,7 @@ variables:
   - name: version.major
     value: "1"
   - name: version.minor
-    value: "0"
+    value: "1"
   - name: version.revision
     value: "0"
   - name: version.build

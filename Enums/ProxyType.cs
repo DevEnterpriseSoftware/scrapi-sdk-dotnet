@@ -1,5 +1,4 @@
-﻿using NetEscapades.EnumGenerators;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 namespace DevEnterprise.Scrapi.Sdk;
@@ -8,7 +7,6 @@ namespace DevEnterprise.Scrapi.Sdk;
 /// Proxy type options to use when requesting a scrape operation.
 /// </summary>
 [JsonConverter(typeof(StringEnumConverter))]
-[EnumExtensions]
 public enum ProxyType
 {
   /// <summary>

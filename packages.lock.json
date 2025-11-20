@@ -23,12 +23,6 @@
         "resolved": "1.12.4",
         "contentHash": "ljqvBabvFwKoLniuoQKO8b5bJfJweKLs4fUNS/V5dsvpo0A8MlJqxxn9XVmP2DaskbUXty6IYaWAi1SArGIMeQ=="
       },
-      "NetEscapades.EnumGenerators": {
-        "type": "Direct",
-        "requested": "[1.0.0-beta16, )",
-        "resolved": "1.0.0-beta16",
-        "contentHash": "QKRivsr5EFhkDQbM//DLrdRCkX3X8BtXwsgnp1saswTlXaqzIBgiGFxNFlgEv/WHdKRU9mfRGW2l1dhVFsonyg=="
-      },
       "NETStandard.Library": {
         "type": "Direct",
         "requested": "[2.0.3, )",
@@ -98,12 +92,6 @@
         "resolved": "1.12.4",
         "contentHash": "ljqvBabvFwKoLniuoQKO8b5bJfJweKLs4fUNS/V5dsvpo0A8MlJqxxn9XVmP2DaskbUXty6IYaWAi1SArGIMeQ=="
       },
-      "NetEscapades.EnumGenerators": {
-        "type": "Direct",
-        "requested": "[1.0.0-beta16, )",
-        "resolved": "1.0.0-beta16",
-        "contentHash": "QKRivsr5EFhkDQbM//DLrdRCkX3X8BtXwsgnp1saswTlXaqzIBgiGFxNFlgEv/WHdKRU9mfRGW2l1dhVFsonyg=="
-      },
       "Newtonsoft.Json": {
         "type": "Direct",
         "requested": "[13.0.4, )",
@@ -158,12 +146,6 @@
         "requested": "[1.12.4, )",
         "resolved": "1.12.4",
         "contentHash": "ljqvBabvFwKoLniuoQKO8b5bJfJweKLs4fUNS/V5dsvpo0A8MlJqxxn9XVmP2DaskbUXty6IYaWAi1SArGIMeQ=="
-      },
-      "NetEscapades.EnumGenerators": {
-        "type": "Direct",
-        "requested": "[1.0.0-beta16, )",
-        "resolved": "1.0.0-beta16",
-        "contentHash": "QKRivsr5EFhkDQbM//DLrdRCkX3X8BtXwsgnp1saswTlXaqzIBgiGFxNFlgEv/WHdKRU9mfRGW2l1dhVFsonyg=="
       },
       "Newtonsoft.Json": {
         "type": "Direct",
@@ -220,12 +202,6 @@
         "resolved": "1.12.4",
         "contentHash": "ljqvBabvFwKoLniuoQKO8b5bJfJweKLs4fUNS/V5dsvpo0A8MlJqxxn9XVmP2DaskbUXty6IYaWAi1SArGIMeQ=="
       },
-      "NetEscapades.EnumGenerators": {
-        "type": "Direct",
-        "requested": "[1.0.0-beta16, )",
-        "resolved": "1.0.0-beta16",
-        "contentHash": "QKRivsr5EFhkDQbM//DLrdRCkX3X8BtXwsgnp1saswTlXaqzIBgiGFxNFlgEv/WHdKRU9mfRGW2l1dhVFsonyg=="
-      },
       "Newtonsoft.Json": {
         "type": "Direct",
         "requested": "[13.0.4, )",
@@ -281,12 +257,6 @@
         "resolved": "1.12.4",
         "contentHash": "ljqvBabvFwKoLniuoQKO8b5bJfJweKLs4fUNS/V5dsvpo0A8MlJqxxn9XVmP2DaskbUXty6IYaWAi1SArGIMeQ=="
       },
-      "NetEscapades.EnumGenerators": {
-        "type": "Direct",
-        "requested": "[1.0.0-beta16, )",
-        "resolved": "1.0.0-beta16",
-        "contentHash": "QKRivsr5EFhkDQbM//DLrdRCkX3X8BtXwsgnp1saswTlXaqzIBgiGFxNFlgEv/WHdKRU9mfRGW2l1dhVFsonyg=="
-      },
       "Newtonsoft.Json": {
         "type": "Direct",
         "requested": "[13.0.4, )",
@@ -341,12 +311,6 @@
         "requested": "[1.12.4, )",
         "resolved": "1.12.4",
         "contentHash": "ljqvBabvFwKoLniuoQKO8b5bJfJweKLs4fUNS/V5dsvpo0A8MlJqxxn9XVmP2DaskbUXty6IYaWAi1SArGIMeQ=="
-      },
-      "NetEscapades.EnumGenerators": {
-        "type": "Direct",
-        "requested": "[1.0.0-beta16, )",
-        "resolved": "1.0.0-beta16",
-        "contentHash": "QKRivsr5EFhkDQbM//DLrdRCkX3X8BtXwsgnp1saswTlXaqzIBgiGFxNFlgEv/WHdKRU9mfRGW2l1dhVFsonyg=="
       },
       "Newtonsoft.Json": {
         "type": "Direct",
