@@ -25,4 +25,13 @@ public sealed record SupportedCountryResponse
   /// </value>
   [DataMember]
   public string Key { get; init; } = default!;
+
+  /// <summary>
+  /// The number of proxies available in this country.
+  /// </summary>
+  /// <value>
+  /// The proxy count.
+  /// </value>
+  [DataMember]
+  public int ProxyCount { get; init; }
 }
