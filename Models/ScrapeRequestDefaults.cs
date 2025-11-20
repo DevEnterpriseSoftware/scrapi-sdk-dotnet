@@ -14,6 +14,15 @@ public static class ScrapeRequestDefaults
   public static ResponseFormat ResponseFormat { get; set; } = ResponseFormat.Json;
 
   /// <summary>
+  /// Gets or sets the default response selector (CSS or XPath) to use when instantiating a new <see cref="ScrapeRequest"/>.
+  /// </summary>
+  /// <value>
+  /// The default response selector (CSS or XPath).
+  /// </value>
+  /// <example>.article-content</example>
+  public static string? ResponseSelector { get; set; }
+
+  /// <summary>
   /// Gets or sets the default key/value pair list of cookies to include when instantiating a new <see cref="ScrapeRequest"/>.
   /// </summary>
   /// <value>
@@ -63,6 +72,19 @@ public static class ScrapeRequestDefaults
   /// </value>
   /// <example>ZAF</example>
   public static string? ProxyCountry { get; set; }
+
+  /// <summary>
+  /// Gets or sets the default proxy city to use when instantiating a new <see cref="ScrapeRequest"/>.
+  /// </summary>
+  /// <remarks>
+  /// This is useful for geographically locked websites so that the request can come from the correct location.
+  /// Use /v1/countries/{countryKey}/cities/ to get a list of supported cities names to use.
+  /// </remarks>
+  /// <value>
+  /// The proxy city.
+  /// </value>
+  /// <example>CapeTown</example>
+  public static string? ProxyCity { get; set; }
 
   /// <summary>
   /// Gets or sets the default custom proxy to use when instantiating a new <see cref="ScrapeRequest"/>.

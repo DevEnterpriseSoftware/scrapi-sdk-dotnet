@@ -21,6 +21,7 @@ This is the official .NET SDK for the ScrAPI web scraping service.
 - [Lookups](#lookups)
     - [Balance Check](#balance-check)
     - [Supported Countries](#supported-countries)
+    - [Supported Cities](#supported-cities)
 - [Exceptions](#exceptions)
 
 ## Installation
@@ -77,11 +78,13 @@ var request = new ScrapeRequest("https://deventerprise.com")
     { "header2", "value2" },
   },
   ProxyCountry = "USA",
+  ProxyCity = "NewYork",
   ProxyType = ProxyType.Residential,
   UseBrowser = true,
   SolveCaptchas = true,
   RequestMethod = "GET",
   ResponseFormat = ResponseFormat.Html,
+  ResponseSelector = "//div[@class='content']",
   CustomProxyUrl = "https://user:password@local.proxy:8080",
   SessionId = Guid.NewGuid().ToString(),
   CallbackUrl = new Uri("https://webhook.site/"),
@@ -187,7 +190,7 @@ Debug.Assert(request.Headers.ContainsKey("Sample"));
 
 ## Lookups
 
-The SDK provides wrappers for basic lookups such as the credit balance of an API key and a list of supported country codes to use with the `ProxyCountry` request option.
+The SDK provides wrappers for basic lookups such as the credit balance of an API key and a list of supported country and city codes to use with the `ProxyCountry` and `ProxyCity` request options.
 
 ### Balance Check
 
@@ -206,6 +209,17 @@ var supportedCountries = await client.GetSupportedCountriesAsync();
 foreach (var country in supportedCountries)
 {
   Console.WriteLine($"{country.Key}: {country.Name}");
+}
+```
+
+### Supported Cities
+```csharp
+var supportedCities = await client.GetSupportedCitiesAsync("USA");
+
+// Use the Key value in the ProxyCity request property.
+foreach (var city in supportedCities)
+{
+  Console.WriteLine($"{city.Key}: {city.Name}");
 }
 ```
 

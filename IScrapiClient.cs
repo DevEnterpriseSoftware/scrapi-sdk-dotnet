@@ -56,6 +56,20 @@ public interface IScrapiClient : IDisposable
   Task<IEnumerable<SupportedCountryResponse>> GetSupportedCountriesAsync(CancellationToken cancellationToken = default);
 
   /// <summary>
+  /// Get a list of supported cities that can be used as the ProxyCity value in a scrape request.
+  /// </summary>
+  /// <param name="countryKey">The three-letter country key to get cities for.</param>
+  /// <param name="cancellationToken">(Optional) A token that allows processing to be cancelled.</param>
+  /// <exception cref="ScrapiException">Can be thrown when there are problems with fetching the city list.</exception>
+  /// <remarks>
+  /// The list usually updates every 30 minutes.
+  /// </remarks>
+  /// <returns>
+  /// A list of supported cities.
+  /// </returns>
+  Task<IEnumerable<SupportedCityResponse>> GetSupportedCitiesAsync(string countryKey, CancellationToken cancellationToken = default);
+
+  /// <summary>
   /// Get the current credit balance for your API key.
   /// </summary>
   /// <param name="cancellationToken">(Optional) A token that allows processing to be cancelled.</param>

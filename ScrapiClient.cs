@@ -90,7 +90,17 @@ public sealed class ScrapiClient : IScrapiClient
       throw new ScrapiException("Invalid URL protocol.");
     }
 
-    if (request.ProxyCountry?.Length == 3 &&
+    if (!string.IsNullOrWhiteSpace(request.ProxyCountry) && request.ProxyCountry?.Length != 3)
+    {
+      throw new ScrapiException("Proxy country must be exactly 3 characters long (e.g., 'USA', 'GBR', 'ZAF').");
+    }
+
+    if (!string.IsNullOrWhiteSpace(request.ProxyCity) && string.IsNullOrWhiteSpace(request.ProxyCountry))
+    {
+      throw new ScrapiException("Proxy country must be specified when proxy city is provided.");
+    }
+
+    if (!string.IsNullOrWhiteSpace(request.ProxyCountry) &&
        (request.ProxyType == ProxyType.None || request.ProxyType == ProxyType.Tor))
     {
       throw new ScrapiException("Cannot specify a proxy country when not using proxy (Residential or DataCenter) or when using Tor.");
@@ -117,6 +127,10 @@ public sealed class ScrapiClient : IScrapiClient
   /// <inheritdoc/>
   public async Task<IEnumerable<SupportedCountryResponse>> GetSupportedCountriesAsync(CancellationToken cancellationToken = default)
     => await MakeApiCallAsync<object, IEnumerable<SupportedCountryResponse>?>(HttpMethod.Get, "v1/countries", null, cancellationToken) ?? [];
+
+  /// <inheritdoc/>
+  public async Task<IEnumerable<SupportedCityResponse>> GetSupportedCitiesAsync(string countryKey, CancellationToken cancellationToken = default)
+    => await MakeApiCallAsync<object, IEnumerable<SupportedCityResponse>?>(HttpMethod.Get, $"v1/countries/{countryKey}/cities", null, cancellationToken) ?? [];
 
   /// <inheritdoc/>
   public async Task<int> GetCreditBalanceAsync(CancellationToken cancellationToken = default)

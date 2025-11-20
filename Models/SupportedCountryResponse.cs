@@ -18,7 +18,7 @@ public sealed record SupportedCountryResponse
   public string Name { get; init; } = default!;
 
   /// <summary>
-  /// Gets the country key that can be used for the  ProxyCountry parameter option.
+  /// Gets the country key that can be used for the ProxyCountry parameter option.
   /// </summary>
   /// <value>
   /// The country key.

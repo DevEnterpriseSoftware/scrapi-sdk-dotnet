@@ -78,6 +78,15 @@ public sealed record ScrapeRequest
   public ResponseFormat ResponseFormat { get; set; } = ScrapeRequestDefaults.ResponseFormat;
 
   /// <summary>
+  /// Gets or sets the response selector (CSS or XPath) to use for filtering the response content.
+  /// </summary>
+  /// <value>
+  /// The response selector (CSS or XPath).
+  /// </value>
+  /// <example>.article-content</example>
+  public string? ResponseSelector { get; set; } = ScrapeRequestDefaults.ResponseSelector;
+
+  /// <summary>
   /// Gets or sets key/value pair list of cookies to include in the scrape request.
   /// </summary>
   /// <value>
@@ -142,7 +151,7 @@ public sealed record ScrapeRequest
   public ProxyType ProxyType { get; set; } = ScrapeRequestDefaults.ProxyType;
 
   /// <summary>
-  /// Gets or sets the proxy country to use if you require the scrape request to come from another geographic location.
+  /// Gets or sets the proxy country to use if you require the scrape request to come from specific geographic location.
   /// </summary>
   /// <remarks>
   /// This is useful for geographically locked websites so that the request can come from the correct location.
@@ -154,6 +163,20 @@ public sealed record ScrapeRequest
   /// <example>ZAF</example>
   [DataMember]
   public string? ProxyCountry { get; set; } = ScrapeRequestDefaults.ProxyCountry;
+
+  /// <summary>
+  /// Gets or sets the proxy city to use if you require the scrape request to come from a specific geographic location.
+  /// </summary>
+  /// <remarks>
+  /// This is useful for geographically locked websites so that the request can come from the correct location.
+  /// Use /v1/countries/{countryKey}/cities/ to get a list of supported cities names to use.
+  /// </remarks>
+  /// <value>
+  /// The proxy city.
+  /// </value>
+  /// <example>CapeTown</example>
+  [DataMember]
+  public string? ProxyCity { get; set; } = ScrapeRequestDefaults.ProxyCity;
 
   /// <summary>
   /// Gets or sets the custom proxy URL to use.
