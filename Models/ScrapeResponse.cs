@@ -164,6 +164,33 @@ public sealed record ScrapeResponse
   }
 
   /// <summary>
+  /// A link to the screenshot image file if requested.
+  /// </summary>
+  /// <value>
+  /// The screenshot image file link.
+  /// </value>
+  [DataMember]
+  public Uri? ScreenshotUrl { get; set; }
+
+  /// <summary>
+  /// A link to the PDF file if requested.
+  /// </summary>
+  /// <value>
+  /// The PDF file link.
+  /// </value>
+  [DataMember]
+  public Uri? PdfUrl { get; set; }
+
+  /// <summary>
+  /// A link to the video recording file if requested.
+  /// </summary>
+  /// <value>
+  /// The video recording file link.
+  /// </value>
+  [DataMember]
+  public Uri? VideoUrl { get; set; }
+
+  /// <summary>
   /// A SHA1 hash of the HTML content which can be useful to compare against previous responses.
   /// </summary>
   /// <value>

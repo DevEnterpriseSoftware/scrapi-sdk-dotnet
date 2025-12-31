@@ -22,6 +22,20 @@ public static class BrowserCommandExtensions
   }
 
   /// <summary>
+  /// Scroll the web page by a given number of pixels before continuing.
+  /// </summary>
+  /// <param name="commands">List of browser commands to extend.</param>
+  /// <param name="pixels">The number of pixels to scroll, use negative values to scroll up.</param>
+  /// <returns>
+  /// The same list of browser commands that got extended.
+  /// </returns>
+  public static IList<IBrowserCommand> Scroll(this IList<IBrowserCommand> commands, int pixels = 1000)
+  {
+    commands.Add(new ScrollCommand { Pixels = pixels });
+    return commands;
+  }
+
+  /// <summary>
   /// Wait for a given number of milliseconds before continuing.
   /// </summary>
   /// <param name="commands">List of browser commands to extend.</param>

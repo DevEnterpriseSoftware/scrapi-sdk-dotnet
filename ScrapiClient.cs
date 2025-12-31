@@ -116,6 +116,21 @@ public sealed class ScrapiClient : IScrapiClient
       throw new ScrapiException("Cannot solve captchas unless you are using a browser. Set UseBrowser = true.");
     }
 
+    if (request.IncludeScreenshot && !request.UseBrowser)
+    {
+      throw new ScrapiException("Cannot include a screenshot unless you are using a browser. Set UseBrowser = true.");
+    }
+
+    if (request.IncludePdf && !request.UseBrowser)
+    {
+      throw new ScrapiException("Cannot include a PDF unless you are using a browser. Set UseBrowser = true.");
+    }
+
+    if (request.IncludeVideo && !request.UseBrowser)
+    {
+      throw new ScrapiException("Cannot include a video unless you are using a browser. Set UseBrowser = true.");
+    }
+
     if (request.ResponseFormat != ResponseFormat.Json)
     {
       throw new ScrapiException("The client only supports the JSON response format.");

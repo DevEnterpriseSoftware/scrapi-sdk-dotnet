@@ -52,6 +52,19 @@ internal sealed class BrowserCommandJsonConverter : JsonConverter
                   commands.Add(clickCommand);
                   break;
 
+                case "scroll":
+                  while (reader.Read())
+                  {
+                    if (reader.TokenType == JsonToken.Integer || reader.TokenType == JsonToken.EndObject)
+                    {
+                      break;
+                    }
+                  }
+
+                  var scrollCommand = new ScrollCommand { Pixels = Convert.ToInt32(reader.Value ?? 0) };
+                  commands.Add(scrollCommand);
+                  break;
+
                 case "wait":
                   while (reader.Read())
                   {

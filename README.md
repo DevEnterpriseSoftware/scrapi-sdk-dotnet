@@ -82,6 +82,9 @@ var request = new ScrapeRequest("https://deventerprise.com")
   ProxyType = ProxyType.Residential,
   UseBrowser = true,
   SolveCaptchas = true,
+  IncludeScreenshot = true,
+  IncludePdf = true,
+  IncludeVideo = true,
   RequestMethod = "GET",
   ResponseFormat = ResponseFormat.Html,
   ResponseSelector = "//div[@class='content']",
@@ -114,6 +117,7 @@ request.BrowserCommands
   .WaitFor("input[type='reset']")
   .Click("input[type='reset']")
   .Wait(TimeSpan.FromSeconds(1))
+  .Scroll(1000)
   .Evaluate("console.log('any valid code...')");
 ```
 
@@ -124,15 +128,18 @@ The response data contains all the result information about your request includi
 ```csharp
 var response = await client.ScrapeAsync(request);
 
-Console.WriteLine(response.RequestUrl);  // The requested URL.
-Console.WriteLine(response.ResponseUrl); // The final URL of the page.
-Console.WriteLine(response.Duration);    // The amount of time the operation took.
-Console.WriteLine(response.Attempts);    // The number of attempts to scrape the page.
-Console.WriteLine(response.CreditsUsed); // The number of credits used for this request.
-Console.WriteLine(response.StatusCode);  // The response status code from the request.
-Console.WriteLine(response.Content);     // The final page content.
-Console.WriteLine(response.ContentHash); // SHA1 hash of the content.
-Console.WriteLine(response.Html);        // Html Agility Pack parsed HTML content.
+Console.WriteLine(response.RequestUrl);    // The requested URL.
+Console.WriteLine(response.ResponseUrl);   // The final URL of the page.
+Console.WriteLine(response.Duration);      // The amount of time the operation took.
+Console.WriteLine(response.Attempts);      // The number of attempts to scrape the page.
+Console.WriteLine(response.CreditsUsed);   // The number of credits used for this request.
+Console.WriteLine(response.StatusCode);    // The response status code from the request.
+Console.WriteLine(response.ScreenshotUrl); // The URL of the screenshot file if included.
+Console.WriteLine(response.PdfUrl);        // The URL of the PDF file if included.
+Console.WriteLine(response.VideoUrl);      // The URL of the video file if included.
+Console.WriteLine(response.Content);       // The final page content.
+Console.WriteLine(response.ContentHash);   // SHA1 hash of the content.
+Console.WriteLine(response.Html);          // Html Agility Pack parsed HTML content.
 
 foreach (var captchaSolved in response.CaptchasSolved)
 {
@@ -163,10 +170,11 @@ This SDK also provides a number of convenient [extensions](https://github.com/De
 - Strip script tags from HTML
 - Safe query selector that does not throw
 - Next/adjacent element finder
-- Comprehensive check of element visibility.
-- Style parsing.
+- Comprehensive check of element visibility
+- Style parsing
 
-[Html Agility Pack](https://github.com/zzzprojects/html-agility-pack) is included as well as [Hazz](https://github.com/atifaziz/Hazz) for HTML parsing.
+[Html Agility Pack](https://github.com/zzzprojects/html-agility-pack) is included.  
+[Hazz](https://github.com/atifaziz/Hazz) is another good option if you need more HTML parsing methods.  
 
 ## Scrape Request Defaults
 

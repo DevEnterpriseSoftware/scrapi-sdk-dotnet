@@ -1,7 +1,7 @@
 ﻿namespace DevEnterprise.Scrapi.Sdk.BrowserCommands;
 
 /// <summary>
-/// Test input browser command.
+/// Text input browser command.
 /// </summary>
 public sealed record InputCommand : IBrowserCommand
 {

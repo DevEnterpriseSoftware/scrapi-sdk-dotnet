@@ -224,6 +224,51 @@ public sealed record ScrapeRequest
   public bool SolveCaptchas { get; set; } = ScrapeRequestDefaults.SolveCaptchas;
 
   /// <summary>
+  /// Gets or sets a value indicating whether a screenshot of the page should be included in the response.
+  /// </summary>
+  /// <remarks>
+  /// Taking screenshots requires setting <see cref="UseBrowser"/> to <c>true</c>.
+  /// A link to the screenshot image will be included in the <see cref="ScrapeResponse"/> object.
+  /// </remarks>
+  /// <value>
+  /// <c>true</c> to include a screenshot, <c>false</c> to exclude it.
+  /// </value>
+  /// <example>false</example>
+  [DataMember(EmitDefaultValue = false)]
+  [DefaultValue(false)]
+  public bool IncludeScreenshot { get; set; } = ScrapeRequestDefaults.IncludeScreenshot;
+
+  /// <summary>
+  /// Gets or sets a value indicating whether a PDF file of the page should be included in the response.
+  /// </summary>
+  /// <remarks>
+  /// Generating PDFs requires setting <see cref="UseBrowser"/> to <c>true</c>.
+  /// A link to the PDF file will be included in the <see cref="ScrapeResponse"/> object.
+  /// </remarks>
+  /// <value>
+  /// <c>true</c> to include a PDF, <c>false</c> to exclude it.
+  /// </value>
+  /// <example>false</example>
+  [DataMember(EmitDefaultValue = false)]
+  [DefaultValue(false)]
+  public bool IncludePdf { get; set; } = ScrapeRequestDefaults.IncludePdf;
+
+  /// <summary>
+  /// Gets or sets a value indicating whether a video recording of the page and actions should be included in the response.
+  /// </summary>
+  /// <remarks>
+  /// Recording videos requires setting <see cref="UseBrowser"/> to <c>true</c>.
+  /// A link to the video recording file will be included in the <see cref="ScrapeResponse"/> object.
+  /// </remarks>
+  /// <value>
+  /// <c>true</c> to include a video recording, <c>false</c> to exclude it.
+  /// </value>
+  /// <example>false</example>
+  [DataMember(EmitDefaultValue = false)]
+  [DefaultValue(false)]
+  public bool IncludeVideo { get; set; } = ScrapeRequestDefaults.IncludeVideo;
+
+  /// <summary>
   /// Gets or sets the option to accept or reject popup dialogs when using browser commands.
   /// </summary>
   /// <remarks>

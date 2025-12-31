@@ -19,7 +19,6 @@ public static class ScrapeRequestDefaults
   /// <value>
   /// The default response selector (CSS or XPath).
   /// </value>
-  /// <example>.article-content</example>
   public static string? ResponseSelector { get; set; }
 
   /// <summary>
@@ -57,7 +56,6 @@ public static class ScrapeRequestDefaults
   /// <value>
   /// The type of the proxy to use.
   /// </value>
-  /// <example>3</example>
   public static ProxyType ProxyType { get; set; } = ProxyType.None;
 
   /// <summary>
@@ -70,7 +68,6 @@ public static class ScrapeRequestDefaults
   /// <value>
   /// The proxy country.
   /// </value>
-  /// <example>ZAF</example>
   public static string? ProxyCountry { get; set; }
 
   /// <summary>
@@ -83,7 +80,6 @@ public static class ScrapeRequestDefaults
   /// <value>
   /// The proxy city.
   /// </value>
-  /// <example>CapeTown</example>
   public static string? ProxyCity { get; set; }
 
   /// <summary>
@@ -96,7 +92,6 @@ public static class ScrapeRequestDefaults
   /// <value>
   /// The custom proxy URL.
   /// </value>
-  /// <example>https://user:password@local.proxy:8080</example>
   public static string? CustomProxyUrl { get; set; }
 
   /// <summary>
@@ -108,14 +103,61 @@ public static class ScrapeRequestDefaults
   /// <value>
   /// <c>true</c> to use a headless browser, <c>false</c> to use a normal HTTP client.
   /// </value>
-  /// <example>false</example>
   public static bool UseBrowser { get; set; }
+
+  /// <summary>
+  /// Gets or sets the default indicator of whether you want to automatically detect, solve and submit any captchas.
+  /// </summary>
+  /// <remarks>
+  /// Solving captchas requires setting <see cref="UseBrowser"/> to <c>true</c>.
+  /// Captchas can be largely avoided if using a <see cref="ProxyType"/>.
+  /// </remarks>
+  /// <value>
+  /// <c>true</c> automatically detect, solve and submit and forms protected with captchas.
+  /// </value>
+  public static bool SolveCaptchas { get; set; }
+
+  /// <summary>
+  /// Gets or sets the default indicator of whether a screenshot of the page should be included in the response.
+  /// </summary>
+  /// <remarks>
+  /// Taking screenshots requires setting <see cref="UseBrowser"/> to <c>true</c>.
+  /// A link to the screenshot image will be included in the <see cref="ScrapeResponse"/> object.
+  /// </remarks>
+  /// <value>
+  /// <c>true</c> to include a screenshot, <c>false</c> to exclude it.
+  /// </value>
+  public static bool IncludeScreenshot { get; set; }
+
+  /// <summary>
+  /// Gets or sets the default indicator of whether a PDF should be included in the response.
+  /// </summary>
+  /// <remarks>
+  /// Taking screenshots requires setting <see cref="UseBrowser"/> to <c>true</c>.
+  /// A link to the PDF file will be included in the <see cref="ScrapeResponse"/> object.
+  /// </remarks>
+  /// <value>
+  /// <c>true</c> to include a PDF, <c>false</c> to exclude it.
+  /// </value>
+  public static bool IncludePdf { get; set; }
+
+  /// <summary>
+  /// Gets or sets the default indicator of whether a video should be included in the response.
+  /// </summary>
+  /// <remarks>
+  /// Taking screenshots requires setting <see cref="UseBrowser"/> to <c>true</c>.
+  /// A link to the video recording file will be included in the <see cref="ScrapeResponse"/> object.
+  /// </remarks>
+  /// <value>
+  /// <c>true</c> to include a video recording, <c>false</c> to exclude it.
+  /// </value>
+  public static bool IncludeVideo { get; set; }
 
   /// <summary>
   /// Gets or sets the default option to accept or reject popup dialogs when instantiating a new <see cref="ScrapeRequest"/>.
   /// </summary>
   /// <remarks>
-  /// By default all popup dialogs are cancelled, if that it not the expected behavior you can choose to accept any pop0up dialogs instead.
+  /// By default all popup dialogs are cancelled, if that it not the expected behavior you can choose to accept any popup dialogs instead.
   /// </remarks>
   /// <value>
   /// Whether to accept or reject any popup dialogs.
@@ -145,17 +187,4 @@ public static class ScrapeRequestDefaults
   /// The URL to POST response data to when the scraping operation completes.
   /// </value>
   public static Uri? CallbackUrl { get; set; }
-
-  /// <summary>
-  /// Gets or sets the default indicator of whether you want to automatically detect, solve and submit any captchas.
-  /// </summary>
-  /// <remarks>
-  /// Solving captchas requires setting <see cref="UseBrowser"/> to <c>true</c>.
-  /// Captchas can be largely avoided if using a <see cref="ProxyType"/>.
-  /// </remarks>
-  /// <value>
-  /// <c>true</c> automatically detect, solve and submit and forms protected with captchas.
-  /// </value>
-  /// <example>false</example>
-  public static bool SolveCaptchas { get; set; }
 }

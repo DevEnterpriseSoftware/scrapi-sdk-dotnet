@@ -86,13 +86,15 @@ steps:
     displayName: "Download Signing Certificate"
     name: SigningCertificate
     inputs:
-      secureFile: "DevEnterprise.pfx"
+      secureFile: "DevEnterprise.cer"
+    enabled: false
   
   - task: NuGetCommand@2
     displayName: "Sign NuGet Package"
     inputs:
       command: custom
       arguments: 'sign $(Build.ArtifactStagingDirectory)\NuGet\*.nupkg -CertificatePath "$(SigningCertificate.SecureFilePath)" -CertificatePassword "$(CertificatePassword)" -Timestamper http://timestamp.sectigo.com?td=sha256'
+    enabled: false
 
   - task: PublishBuildArtifacts@1
     displayName: "Publish NuGet Package Artifact"

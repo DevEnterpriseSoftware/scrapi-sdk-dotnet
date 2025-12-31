@@ -1,7 +1,7 @@
 ﻿namespace DevEnterprise.Scrapi.Sdk.BrowserCommands;
 
 /// <summary>
-/// Test input browser command.
+/// Option list selection browser command.
 /// </summary>
 public sealed record SelectCommand : IBrowserCommand
 {
