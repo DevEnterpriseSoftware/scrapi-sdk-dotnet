@@ -6,7 +6,7 @@ namespace DevEnterprise.Scrapi.Sdk.BrowserCommands;
 /// <summary>
 /// Handles serializing and deserializing browser command JSON.
 /// </summary>
-internal sealed class BrowserCommandJsonConverter : JsonConverter
+public sealed class BrowserCommandJsonConverter : JsonConverter
 {
   /// <inheritdoc/>
   public override bool CanConvert(Type objectType) => throw new NotImplementedException();
