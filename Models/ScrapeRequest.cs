@@ -74,7 +74,7 @@ public sealed record ScrapeRequest
   /// The expected response format.
   /// <example>0</example>
   [DataMember(EmitDefaultValue = false)]
-  [DefaultValue(typeof(ResponseFormat), "Json")]
+  [DefaultValue(ResponseFormat.Json)]
   public ResponseFormat ResponseFormat { get; set; } = ScrapeRequestDefaults.ResponseFormat;
 
   /// <summary>
@@ -148,7 +148,7 @@ public sealed record ScrapeRequest
   /// </value>
   /// <example>3</example>
   [DataMember(EmitDefaultValue = false)]
-  [DefaultValue(typeof(ProxyType), "None")]
+  [DefaultValue(ProxyType.None)]
   public ProxyType ProxyType { get; set; } = ScrapeRequestDefaults.ProxyType;
 
   /// <summary>

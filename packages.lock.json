@@ -4,11 +4,11 @@
     ".NETStandard,Version=v2.0": {
       "ConfigureAwait.Fody": {
         "type": "Direct",
-        "requested": "[3.3.2, )",
-        "resolved": "3.3.2",
-        "contentHash": "vzGcpFU7uY4SbdB1Q68sFqv52HU5V1l39bF1rw6BIb7Os/DRLZa5ObV1yf/CNuTXj8IZjqJQ7PnTzSUiI/W49A==",
+        "requested": "[3.4.0, )",
+        "resolved": "3.4.0",
+        "contentHash": "TZ8HzGKNqCVPccGggWH0oAf8kTY676Aqnh3cWNK+zbKAqsRwQ2yLkwenWWF+2N3QXx/EZsP6cy7TRx0hyBiMQA==",
         "dependencies": {
-          "Fody": "6.6.4"
+          "Fody": "6.9.3"
         }
       },
       "Fody": {
@@ -46,9 +46,9 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
-        "requested": "[10.18.0.131500, )",
-        "resolved": "10.18.0.131500",
-        "contentHash": "Rbad71/k5e8MfG81i03Yh2YQQgovIdmyhWcLRevrcW4h9i1DUB3kKX9O1QiOGXcULLjkTdRAXdR8A8XtinL3Pg=="
+        "requested": "[10.26.0.140279, )",
+        "resolved": "10.26.0.140279",
+        "contentHash": "n6+KDAbvKCJs0oYIQlxFdsmvcj1YSJ7TiqEd5jYq58T1s1Q4bwymFMeVFGDUyDKqSH9YO/7Fobvm0u9WJ7MaRQ=="
       },
       "StyleCop.Analyzers": {
         "type": "Direct",
@@ -73,11 +73,11 @@
     ".NETStandard,Version=v2.1": {
       "ConfigureAwait.Fody": {
         "type": "Direct",
-        "requested": "[3.3.2, )",
-        "resolved": "3.3.2",
-        "contentHash": "vzGcpFU7uY4SbdB1Q68sFqv52HU5V1l39bF1rw6BIb7Os/DRLZa5ObV1yf/CNuTXj8IZjqJQ7PnTzSUiI/W49A==",
+        "requested": "[3.4.0, )",
+        "resolved": "3.4.0",
+        "contentHash": "TZ8HzGKNqCVPccGggWH0oAf8kTY676Aqnh3cWNK+zbKAqsRwQ2yLkwenWWF+2N3QXx/EZsP6cy7TRx0hyBiMQA==",
         "dependencies": {
-          "Fody": "6.6.4"
+          "Fody": "6.9.3"
         }
       },
       "Fody": {
@@ -106,9 +106,9 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
-        "requested": "[10.18.0.131500, )",
-        "resolved": "10.18.0.131500",
-        "contentHash": "Rbad71/k5e8MfG81i03Yh2YQQgovIdmyhWcLRevrcW4h9i1DUB3kKX9O1QiOGXcULLjkTdRAXdR8A8XtinL3Pg=="
+        "requested": "[10.26.0.140279, )",
+        "resolved": "10.26.0.140279",
+        "contentHash": "n6+KDAbvKCJs0oYIQlxFdsmvcj1YSJ7TiqEd5jYq58T1s1Q4bwymFMeVFGDUyDKqSH9YO/7Fobvm0u9WJ7MaRQ=="
       },
       "StyleCop.Analyzers": {
         "type": "Direct",
@@ -128,11 +128,11 @@
     "net10.0": {
       "ConfigureAwait.Fody": {
         "type": "Direct",
-        "requested": "[3.3.2, )",
-        "resolved": "3.3.2",
-        "contentHash": "vzGcpFU7uY4SbdB1Q68sFqv52HU5V1l39bF1rw6BIb7Os/DRLZa5ObV1yf/CNuTXj8IZjqJQ7PnTzSUiI/W49A==",
+        "requested": "[3.4.0, )",
+        "resolved": "3.4.0",
+        "contentHash": "TZ8HzGKNqCVPccGggWH0oAf8kTY676Aqnh3cWNK+zbKAqsRwQ2yLkwenWWF+2N3QXx/EZsP6cy7TRx0hyBiMQA==",
         "dependencies": {
-          "Fody": "6.6.4"
+          "Fody": "6.9.3"
         }
       },
       "Fody": {
@@ -161,9 +161,9 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
-        "requested": "[10.18.0.131500, )",
-        "resolved": "10.18.0.131500",
-        "contentHash": "Rbad71/k5e8MfG81i03Yh2YQQgovIdmyhWcLRevrcW4h9i1DUB3kKX9O1QiOGXcULLjkTdRAXdR8A8XtinL3Pg=="
+        "requested": "[10.26.0.140279, )",
+        "resolved": "10.26.0.140279",
+        "contentHash": "n6+KDAbvKCJs0oYIQlxFdsmvcj1YSJ7TiqEd5jYq58T1s1Q4bwymFMeVFGDUyDKqSH9YO/7Fobvm0u9WJ7MaRQ=="
       },
       "StyleCop.Analyzers": {
         "type": "Direct",
@@ -183,11 +183,11 @@
     "net6.0": {
       "ConfigureAwait.Fody": {
         "type": "Direct",
-        "requested": "[3.3.2, )",
-        "resolved": "3.3.2",
-        "contentHash": "vzGcpFU7uY4SbdB1Q68sFqv52HU5V1l39bF1rw6BIb7Os/DRLZa5ObV1yf/CNuTXj8IZjqJQ7PnTzSUiI/W49A==",
+        "requested": "[3.4.0, )",
+        "resolved": "3.4.0",
+        "contentHash": "TZ8HzGKNqCVPccGggWH0oAf8kTY676Aqnh3cWNK+zbKAqsRwQ2yLkwenWWF+2N3QXx/EZsP6cy7TRx0hyBiMQA==",
         "dependencies": {
-          "Fody": "6.6.4"
+          "Fody": "6.9.3"
         }
       },
       "Fody": {
@@ -216,9 +216,9 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
-        "requested": "[10.18.0.131500, )",
-        "resolved": "10.18.0.131500",
-        "contentHash": "Rbad71/k5e8MfG81i03Yh2YQQgovIdmyhWcLRevrcW4h9i1DUB3kKX9O1QiOGXcULLjkTdRAXdR8A8XtinL3Pg=="
+        "requested": "[10.26.0.140279, )",
+        "resolved": "10.26.0.140279",
+        "contentHash": "n6+KDAbvKCJs0oYIQlxFdsmvcj1YSJ7TiqEd5jYq58T1s1Q4bwymFMeVFGDUyDKqSH9YO/7Fobvm0u9WJ7MaRQ=="
       },
       "StyleCop.Analyzers": {
         "type": "Direct",
@@ -238,11 +238,11 @@
     "net8.0": {
       "ConfigureAwait.Fody": {
         "type": "Direct",
-        "requested": "[3.3.2, )",
-        "resolved": "3.3.2",
-        "contentHash": "vzGcpFU7uY4SbdB1Q68sFqv52HU5V1l39bF1rw6BIb7Os/DRLZa5ObV1yf/CNuTXj8IZjqJQ7PnTzSUiI/W49A==",
+        "requested": "[3.4.0, )",
+        "resolved": "3.4.0",
+        "contentHash": "TZ8HzGKNqCVPccGggWH0oAf8kTY676Aqnh3cWNK+zbKAqsRwQ2yLkwenWWF+2N3QXx/EZsP6cy7TRx0hyBiMQA==",
         "dependencies": {
-          "Fody": "6.6.4"
+          "Fody": "6.9.3"
         }
       },
       "Fody": {
@@ -271,9 +271,9 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
-        "requested": "[10.18.0.131500, )",
-        "resolved": "10.18.0.131500",
-        "contentHash": "Rbad71/k5e8MfG81i03Yh2YQQgovIdmyhWcLRevrcW4h9i1DUB3kKX9O1QiOGXcULLjkTdRAXdR8A8XtinL3Pg=="
+        "requested": "[10.26.0.140279, )",
+        "resolved": "10.26.0.140279",
+        "contentHash": "n6+KDAbvKCJs0oYIQlxFdsmvcj1YSJ7TiqEd5jYq58T1s1Q4bwymFMeVFGDUyDKqSH9YO/7Fobvm0u9WJ7MaRQ=="
       },
       "StyleCop.Analyzers": {
         "type": "Direct",
@@ -293,11 +293,11 @@
     "net9.0": {
       "ConfigureAwait.Fody": {
         "type": "Direct",
-        "requested": "[3.3.2, )",
-        "resolved": "3.3.2",
-        "contentHash": "vzGcpFU7uY4SbdB1Q68sFqv52HU5V1l39bF1rw6BIb7Os/DRLZa5ObV1yf/CNuTXj8IZjqJQ7PnTzSUiI/W49A==",
+        "requested": "[3.4.0, )",
+        "resolved": "3.4.0",
+        "contentHash": "TZ8HzGKNqCVPccGggWH0oAf8kTY676Aqnh3cWNK+zbKAqsRwQ2yLkwenWWF+2N3QXx/EZsP6cy7TRx0hyBiMQA==",
         "dependencies": {
-          "Fody": "6.6.4"
+          "Fody": "6.9.3"
         }
       },
       "Fody": {
@@ -326,9 +326,9 @@
       },
       "SonarAnalyzer.CSharp": {
         "type": "Direct",
-        "requested": "[10.18.0.131500, )",
-        "resolved": "10.18.0.131500",
-        "contentHash": "Rbad71/k5e8MfG81i03Yh2YQQgovIdmyhWcLRevrcW4h9i1DUB3kKX9O1QiOGXcULLjkTdRAXdR8A8XtinL3Pg=="
+        "requested": "[10.26.0.140279, )",
+        "resolved": "10.26.0.140279",
+        "contentHash": "n6+KDAbvKCJs0oYIQlxFdsmvcj1YSJ7TiqEd5jYq58T1s1Q4bwymFMeVFGDUyDKqSH9YO/7Fobvm0u9WJ7MaRQ=="
       },
       "StyleCop.Analyzers": {
         "type": "Direct",

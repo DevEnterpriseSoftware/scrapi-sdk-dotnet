@@ -1,0 +1,16 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="NuGet" />
+    <BuildType Name="Release" />
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/tests/">
+    <Project Path="tests/DevEnterprise.Scrapi.Sdk.Tests/DevEnterprise.Scrapi.Sdk.Tests.csproj">
+      <BuildType Solution="NuGet|*" Project="Debug" />
+    </Project>
+  </Folder>
+  <Project Path="DevEnterprise.Scrapi.Sdk.csproj" />
+</Solution>

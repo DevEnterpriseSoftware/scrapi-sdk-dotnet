@@ -101,9 +101,9 @@ public sealed class ScrapiClient : IScrapiClient
     }
 
     if (!string.IsNullOrWhiteSpace(request.ProxyCountry) &&
-       (request.ProxyType == ProxyType.None || request.ProxyType == ProxyType.Tor))
+       (request.ProxyType is ProxyType.None || request.ProxyType is ProxyType.Tor))
     {
-      throw new ScrapiException("Cannot specify a proxy country when not using proxy (Residential or DataCenter) or when using Tor.");
+      throw new ScrapiException("Cannot specify a proxy country when not using a proxy (Residential or DataCenter) or when using Tor.");
     }
 
     if (request.BrowserCommands.Count > 0 && !request.UseBrowser)

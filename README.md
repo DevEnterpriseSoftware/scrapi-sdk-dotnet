@@ -1,15 +1,21 @@
 ![ScrAPI logo](https://raw.githubusercontent.com/DevEnterpriseSoftware/scrapi-sdk-dotnet/master/icon_small.png)
-	
+
 # ScrAPI SDK for .NET
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 ![Nuget](https://img.shields.io/nuget/dt/ScrAPI)
 
+
 ScrAPI is your ultimate web scraping solution, offering powerful, reliable, and easy-to-use features to extract data from any website effortlessly.
 
-This is the official .NET SDK for the ScrAPI web scraping service.
-- [Website](https://scrapi.tech)
-- [Documentation](https://scrapi.tech/docs)
+Official .NET SDK for the [ScrAPI](https://scrapi.tech) web scraping service.
+
+- Website: https://scrapi.tech
+- API docs: https://scrapi.tech/docs
+- Source repository: https://github.com/DevEnterpriseSoftware/scrapi-sdk-dotnet
+
+## Table of contents
+
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Dependency Injection](#dependency-injection)
@@ -173,8 +179,8 @@ This SDK also provides a number of convenient [extensions](https://github.com/De
 - Comprehensive check of element visibility
 - Style parsing
 
-[Html Agility Pack](https://github.com/zzzprojects/html-agility-pack) is included.  
-[Hazz](https://github.com/atifaziz/Hazz) is another good option if you need more HTML parsing methods.  
+[Html Agility Pack](https://github.com/zzzprojects/html-agility-pack) is included.
+[Hazz](https://github.com/atifaziz/Hazz) is another good option if you need more HTML parsing methods.
 
 ## Scrape Request Defaults
 
