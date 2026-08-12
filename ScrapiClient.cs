@@ -176,12 +176,18 @@ public sealed class ScrapiClient : IScrapiClient
     {
       if (data is not null)
       {
+#if NET8_0_OR_GREATER
+        await using var ms = new MemoryStream();
+        await using var sw = new StreamWriter(ms, StreamEncoding, 1024, true);
+        await using var jtw = new JsonTextWriter(sw) { Formatting = Formatting.None };
+#else
         using var ms = new MemoryStream();
         using var sw = new StreamWriter(ms, StreamEncoding, 1024, true);
         using var jtw = new JsonTextWriter(sw) { Formatting = Formatting.None };
+#endif
         var js = new JsonSerializer();
         js.Serialize(jtw, data);
-        await jtw.FlushAsync();
+        await jtw.FlushAsync(cancellationToken);
 
         ms.Seek(0, SeekOrigin.Begin);
         var httpContent = new StreamContent(ms);
@@ -196,7 +202,11 @@ public sealed class ScrapiClient : IScrapiClient
         response = await httpClient.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, cancellationToken);
       }
 
+#if NETSTANDARD2_0 || NETSTANDARD2_1
       var stream = await response.Content.ReadAsStreamAsync();
+#else
+      var stream = await response.Content.ReadAsStreamAsync(cancellationToken);
+#endif
       if (stream?.CanRead != true)
       {
         return default;

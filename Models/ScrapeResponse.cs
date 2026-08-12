@@ -202,10 +202,14 @@ public sealed record ScrapeResponse
     {
       if (!string.IsNullOrEmpty(content))
       {
+#pragma warning disable S8969 // Null-forgiving operators should not be redundant
         var bytes = new byte[content!.Length * sizeof(char)];
+#pragma warning restore S8969 // Null-forgiving operators should not be redundant
         Buffer.BlockCopy(content.ToCharArray(), 0, bytes, 0, bytes.Length);
 
+#pragma warning disable S4790 // Weak hashing algorithms should not be used
         using var sha1 = SHA1.Create();
+#pragma warning restore S4790 // Weak hashing algorithms should not be used
         var encoded = sha1.ComputeHash(bytes);
 
         var sb = new StringBuilder();

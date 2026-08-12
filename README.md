@@ -84,7 +84,7 @@ var request = new ScrapeRequest("https://deventerprise.com")
     { "header2", "value2" },
   },
   ProxyCountry = "USA",
-  ProxyCity = "NewYork",
+  ProxyCity = "New York",
   ProxyType = ProxyType.Residential,
   UseBrowser = true,
   SolveCaptchas = true,

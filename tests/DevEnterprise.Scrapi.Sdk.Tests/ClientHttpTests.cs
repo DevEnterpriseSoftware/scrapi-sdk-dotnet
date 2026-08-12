@@ -71,7 +71,7 @@ public class ClientHttpTests
           (int)HttpStatusCode.OK,
           """
           [
-            { "Name": "New York", "Key": "NewYork", "ProxyCount": 5 }
+            { "Name": "New York", "Key": "NEWYORK", "ProxyCount": 5 }
           ]
           """),
         "/v1/balance" => new LocalHttpServer.StubResponse(
@@ -92,7 +92,7 @@ public class ClientHttpTests
 
     var cities = (await client.GetSupportedCitiesAsync("USA")).ToList();
     Assert.Single(cities);
-    Assert.Equal("NewYork", cities[0].Key);
+    Assert.Equal("NEWYORK", cities[0].Key);
 
     var balance = await client.GetCreditBalanceAsync();
     Assert.Equal(123, balance);
