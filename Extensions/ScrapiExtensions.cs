@@ -119,7 +119,7 @@ public static partial class ScrapiExtensions
 
     bool thisVisible = false;
 
-    if (attribute is null || CheckStyleVisibility(attribute.Value))
+    if (CheckStyleVisibility(attribute?.Value ?? string.Empty))
     {
       thisVisible = true;
     }
