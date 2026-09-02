@@ -54,7 +54,7 @@ public sealed record ScrapeResponse
   /// The final URL.
   /// </value>
   /// <example>https://deventerprise.com/</example>
-  [DataMember]
+  [DataMember(EmitDefaultValue = false)]
   public Uri? ResponseUrl { get; set; }
 
   /// <summary>
@@ -148,7 +148,7 @@ public sealed record ScrapeResponse
   /// <value>
   /// The HTML/JSON content.
   /// </value>
-  [DataMember]
+  [DataMember(EmitDefaultValue = false)]
   public string? Content
   {
     get
@@ -169,7 +169,7 @@ public sealed record ScrapeResponse
   /// <value>
   /// The screenshot image file link.
   /// </value>
-  [DataMember]
+  [DataMember(EmitDefaultValue = false)]
   public Uri? ScreenshotUrl { get; set; }
 
   /// <summary>
@@ -178,7 +178,7 @@ public sealed record ScrapeResponse
   /// <value>
   /// The PDF file link.
   /// </value>
-  [DataMember]
+  [DataMember(EmitDefaultValue = false)]
   public Uri? PdfUrl { get; set; }
 
   /// <summary>
@@ -187,7 +187,7 @@ public sealed record ScrapeResponse
   /// <value>
   /// The video recording file link.
   /// </value>
-  [DataMember]
+  [DataMember(EmitDefaultValue = false)]
   public Uri? VideoUrl { get; set; }
 
   /// <summary>
@@ -224,4 +224,22 @@ public sealed record ScrapeResponse
       return string.Empty;
     }
   }
+
+  /// <summary>
+  /// Determines whether <see cref="CaptchasSolved"/> should be serialized, omitting it when empty.
+  /// </summary>
+  /// <returns><c>true</c> if <see cref="CaptchasSolved"/> should be serialized.</returns>
+  public bool ShouldSerializeCaptchasSolved() => CaptchasSolved.Count > 0;
+
+  /// <summary>
+  /// Determines whether <see cref="Cookies"/> should be serialized, omitting it when empty.
+  /// </summary>
+  /// <returns><c>true</c> if <see cref="Cookies"/> should be serialized.</returns>
+  public bool ShouldSerializeCookies() => Cookies.Count > 0;
+
+  /// <summary>
+  /// Determines whether <see cref="Headers"/> should be serialized, omitting it when empty.
+  /// </summary>
+  /// <returns><c>true</c> if <see cref="Headers"/> should be serialized.</returns>
+  public bool ShouldSerializeHeaders() => Headers.Count > 0;
 }

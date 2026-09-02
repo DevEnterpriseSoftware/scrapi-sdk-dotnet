@@ -132,7 +132,7 @@ public sealed record ScrapeRequest
   /// <value>
   /// Base64 encoded binary data.
   /// </value>
-  [DataMember]
+  [DataMember(EmitDefaultValue = false)]
   public string? RequestBodyBase64 { get; set; }
 
   /// <summary>
@@ -190,7 +190,7 @@ public sealed record ScrapeRequest
   /// The custom proxy URL.
   /// </value>
   /// <example>https://user:password@local.proxy:8080</example>
-  [DataMember]
+  [DataMember(EmitDefaultValue = false)]
   public string? CustomProxyUrl { get; set; } = ScrapeRequestDefaults.CustomProxyUrl;
 
   /// <summary>
@@ -292,7 +292,7 @@ public sealed record ScrapeRequest
   /// <value>
   /// The session identifier.
   /// </value>
-  [DataMember]
+  [DataMember(EmitDefaultValue = false)]
   public string? SessionId { get; set; } = ScrapeRequestDefaults.SessionId;
 
   /// <summary>
@@ -304,7 +304,7 @@ public sealed record ScrapeRequest
   /// <value>
   /// The URL to POST response data to when the scraping operation completes.
   /// </value>
-  [DataMember]
+  [DataMember(EmitDefaultValue = false)]
   public Uri? CallbackUrl { get; set; } = ScrapeRequestDefaults.CallbackUrl;
 
   /// <summary>
@@ -320,4 +320,22 @@ public sealed record ScrapeRequest
   [DataMember]
   [JsonConverter(typeof(BrowserCommandJsonConverter))]
   public IList<IBrowserCommand> BrowserCommands { get; } = [];
+
+  /// <summary>
+  /// Determines whether <see cref="Cookies"/> should be serialized, omitting it when empty.
+  /// </summary>
+  /// <returns><c>true</c> if <see cref="Cookies"/> should be serialized.</returns>
+  public bool ShouldSerializeCookies() => Cookies.Count > 0;
+
+  /// <summary>
+  /// Determines whether <see cref="Headers"/> should be serialized, omitting it when empty.
+  /// </summary>
+  /// <returns><c>true</c> if <see cref="Headers"/> should be serialized.</returns>
+  public bool ShouldSerializeHeaders() => Headers.Count > 0;
+
+  /// <summary>
+  /// Determines whether <see cref="BrowserCommands"/> should be serialized, omitting it when empty.
+  /// </summary>
+  /// <returns><c>true</c> if <see cref="BrowserCommands"/> should be serialized.</returns>
+  public bool ShouldSerializeBrowserCommands() => BrowserCommands.Count > 0;
 }
