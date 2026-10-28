@@ -50,7 +50,11 @@ public sealed record ScrapeRequest
   [DataMember]
   public Uri Url
   {
-    get => url;
+    get
+    {
+      return url;
+    }
+
     init
     {
       if (value.IsAbsoluteUri)
