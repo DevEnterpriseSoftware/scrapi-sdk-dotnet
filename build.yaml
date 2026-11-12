@@ -17,7 +17,7 @@ variables:
   - name: version.major
     value: "1"
   - name: version.minor
-    value: "1"
+    value: "4"
   - name: version.revision
     value: "0"
   - name: version.build
@@ -45,14 +45,14 @@ steps:
       addDefault: true
 
   - task: UseDotNet@2
-    displayName: "Use .NET Core 10.x"
+    displayName: "Use .NET Core 11.x"
     inputs:
-      version: 10.x
+      version: 11.x
 
   - task: NuGetToolInstaller@1
-    displayName: "Use NuGet 6.x"
+    displayName: "Use NuGet 7.x"
     inputs:
-      versionSpec: 6.x
+      versionSpec: 7.x
 
   - task: DotNetCoreCLI@2
     displayName: "Build Project"
